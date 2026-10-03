@@ -1,0 +1,75 @@
+diff --git a/Makefile b/Makefile
+index 14a5b3a..97c32e7 100644
+--- a/Makefile
++++ b/Makefile
+@@ -45,7 +45,7 @@ OBJSL		= $(BINARY).o hwinit.o stm32scheduler.o params.o terminal.o terminal_prj.
+            daisychainbms.o simpbms.o outlanderCharger.o Can_OBD2.o cansdo.o sdocommands.o TeslaDCDC.o BMW_E31.o F30_Lever.o \
+            CPC.o ElconCharger.o RearOutlanderinverter.o linbus.o VWCoolantHeater.o JLR_G1.o JLR_G2.o Foccci.o digipot.o\
+ 		   OutlanderHeartBeat.o E65_Lever.o leafbms.o V_Classic.o kangoobms.o OutlanderCanHeater.o VWAirHeater.o\
+-		   MGCoolantHeater.o NissLeafMng.o preheater.o ElconDCDC.o
++		   MGCoolantHeater.o NissLeafMng.o preheater.o ElconDCDC.o GM_GMT900.o
+ 
+ 
+ 
+diff --git a/include/param_prj.h b/include/param_prj.h
+index 493f0bf..91686b2 100644
+--- a/include/param_prj.h
++++ b/include/param_prj.h
+@@ -31,7 +31,7 @@
+  */
+ #define PARAM_LIST                                                             \
+   PARAM_ENTRY(CAT_SETUP, Inverter, INVMODES, 0, 8, 0, 5)                       \
+-  PARAM_ENTRY(CAT_SETUP, Vehicle, VEHMODES, 0, 8, 0, 6)                        \
++  PARAM_ENTRY(CAT_SETUP, Vehicle, VEHMODES, 0, 9, 0, 6)                        \
+   PARAM_ENTRY(CAT_SETUP, GearLvr, SHIFTERS, 0, 4, 0, 108)                      \
+   PARAM_ENTRY(CAT_SETUP, Transmission, TRNMODES, 0, 1, 0, 78)                  \
+   PARAM_ENTRY(CAT_SETUP, interface, CHGINT, 0, 4, 0, 39)                       \
+@@ -309,7 +309,7 @@
+   "0=Absent, 1=ACStd, 2=ACchg, 3=Error, 4=CCS_Not_Rdy, 5=CCS_Rdy, 6=Static"
+ #define VEHMODES                                                               \
+   "0=BMW_E46, 1=BMW_E6x+, 2=Classic, 3=None, 5=BMW_E39, 6=VAG, 7=Subaru, "     \
+-  "8=BMW_E31"
++  "8=BMW_E31, 9=GM_GMT900"
+ #define BMSMODES                                                               \
+   "0=Off, 1=SimpBMS, 2=TiDaisychainSingle, 3=TiDaisychainDual, 4=LeafBms, "    \
+   "5=RenaultKangoo33"
+@@ -478,7 +478,8 @@ enum vehicles {
+   vBMW_E39 = 5,
+   vVAG = 6,
+   vSUBARU = 7,
+-  vBMW_E31 = 8
++  vBMW_E31 = 8,
++  vGM_GMT900 = 9
+ };
+ 
+ enum _potmodes {
+diff --git a/src/stm32_vcu.cpp b/src/stm32_vcu.cpp
+index 35b0dc8..19129c9 100644
+--- a/src/stm32_vcu.cpp
++++ b/src/stm32_vcu.cpp
+@@ -34,6 +34,7 @@
+ #include "ElconDCDC.h"
+ #include "F30_Lever.h"
+ #include "Foccci.h"
++#include "GM_GMT900.h"
+ #include "GS450H.h"
+ #include "JLR_G1.h"
+ #include "JLR_G2.h"
+@@ -185,6 +186,7 @@ static mgCoolantHeater heaterCoolantMG;
+ static vwAirHeater heaterAirVW;
+ static NoVehicle VehicleNone;
+ static V_Classic classVehicle;
++static GM_GMT900 gmt900Vehicle;
+ static Inverter *selectedInverter = &openInv;
+ static Vehicle *selectedVehicle = &VehicleNone;
+ static Heater *selectedHeater = &Heaternone;
+@@ -948,6 +950,9 @@ static void UpdateVehicle() {
+   case vehicles::Classic:
+     selectedVehicle = &classVehicle;
+     break;
++  case vehicles::vGM_GMT900:
++    selectedVehicle = &gmt900Vehicle;
++    break;
+   }
+   // This will call SetCanFilters() via the Clear Callback
+   canInterface[0]->ClearUserMessages();

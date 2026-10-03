@@ -1,0 +1,110 @@
+site_name: ZombieVerter (Stm32-vcu) Documentation
+site_description: User and developer documentation for the ZombieVerter VCU firmware (damienmaguire/Stm32-vcu)
+repo_url: https://github.com/nerdoftech/stm32-vcu-docs
+repo_name: nerdoftech/stm32-vcu-docs
+edit_uri: edit/main/docs/
+copyright: Documentation licensed GPL-3.0, same as the firmware it describes.
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - User Guide:
+      - user/index.md
+      - What the ZombieVerter does: user/overview.md
+      - Hardware and wiring: user/hardware.md
+      - Firmware and tools: user/firmware.md
+      - First-time setup: user/first-setup.md
+      - Operating modes: user/operating-modes.md
+      - Throttle, regen and direction: user/throttle.md
+      - Charging: user/charging.md
+      - BMS, shunt and SOC: user/bms-shunt.md
+      - General purpose I/O: user/gpio.md
+      - Heater, DC-DC and accessories: user/accessories.md
+      - CAN mapping: user/can-mapping.md
+      - Errors and troubleshooting: user/troubleshooting.md
+  - Developer Guide:
+      - dev/index.md
+      - Building, testing and flashing: dev/build.md
+      - Repository layout: dev/repo-layout.md
+      - Architecture and scheduling: dev/architecture.md
+      - Operating-mode state machine: dev/state-machine.md
+      - Parameter system: dev/parameters.md
+      - CAN subsystem: dev/can.md
+      - I/O, ADC and PWM: dev/io.md
+      - Throttle pipeline: dev/throttle.md
+      - Module interfaces: dev/interfaces.md
+      - Module catalog: dev/modules.md
+      - Adding a vehicle class: dev/adding-a-vehicle.md
+      - Adding other modules: dev/adding-other-modules.md
+      - "Worked example: GM GMT900": dev/gmt900-example.md
+      - Code quirks and known issues: dev/known-issues.md
+      - Contributing upstream: dev/contributing.md
+  - Reference:
+      - reference/index.md
+      - Parameters: reference/parameters.md
+      - Spot values: reference/spot-values.md
+      - Enumerations: reference/enums.md
+      - CAN IDs by module: reference/can-ids.md
+      - Connector pinout: reference/pinout.md
+      - Glossary: reference/glossary.md
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
