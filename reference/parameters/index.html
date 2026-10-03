@@ -1,0 +1,3474 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="User and developer documentation for the ZombieVerter VCU firmware (damienmaguire/Stm32-vcu)">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../spot-values/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Parameters - ZombieVerter (Stm32-vcu) Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parameters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ZombieVerter (Stm32-vcu) Documentation" class="md-header__button md-logo" aria-label="ZombieVerter (Stm32-vcu) Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ZombieVerter (Stm32-vcu) Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parameters
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nerdoftech/stm32-vcu-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nerdoftech/stm32-vcu-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../user/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dev/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developer Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ZombieVerter (Stm32-vcu) Documentation" class="md-nav__button md-logo" aria-label="ZombieVerter (Stm32-vcu) Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ZombieVerter (Stm32-vcu) Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nerdoftech/stm32-vcu-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nerdoftech/stm32-vcu-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../user/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    What the ZombieVerter does
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware and wiring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmware and tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/first-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First-time setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/operating-modes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating modes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/throttle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throttle, regen and direction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/charging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/bms-shunt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BMS, shunt and SOC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/gpio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    General purpose I/O
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/accessories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heater, DC-DC and accessories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/can-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors and troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dev/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Building, testing and flashing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/repo-layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repository layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture and scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/state-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating-mode state machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameter system
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/can/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN subsystem
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    I/O, ADC and PWM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/throttle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throttle pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module catalog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/adding-a-vehicle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding a vehicle class
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/adding-other-modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding other modules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/gmt900-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Worked example: GM GMT900
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/known-issues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code quirks and known issues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dev/contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing upstream
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameters
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gearbox-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gearbox Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cruise-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cruise Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contactor-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contactor Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charger-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charger Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dc-dc-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC-DC Converter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heater-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heater Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtc-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RTC Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-purpose-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Purpose I/O
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isa-shunt-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISA Shunt Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwm-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PWM Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spot-values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spot values
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Enumerations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../can-ids/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN IDs by module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Connector pinout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#throttle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Throttle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gearbox-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gearbox Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cruise-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cruise Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contactor-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contactor Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charger-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charger Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dc-dc-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC-DC Converter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Battery Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heater-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heater Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtc-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RTC Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-purpose-io" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General Purpose I/O
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isa-shunt-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ISA Shunt Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pwm-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PWM Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Generated</p>
+<p>Generated by <code>scripts/gen_param_reference.py</code> from <code>include/param_prj.h</code> of firmware <strong>2.41A</strong> (commit <code>b061f84</code>). Edit descriptions in <code>scripts/param_descriptions.py</code>, not here.</p>
+</div>
+<p>Parameters are settings you change in the web interface or with the terminal <code>set</code> command and store with <code>save</code>. Values are checked against min/max when set through the terminal, web UI or CAN SDO. The <strong>ID</strong> is the stable number used to store the value in flash and to address it over CAN SDO (index <code>0x21hh</code>, sub-index <code>ll</code> for ID <code>0xhhll</code>; see <a href="../../user/can-mapping/">CAN mapping</a>).</p>
+<h2 id="general-setup">General Setup<a class="headerlink" href="#general-setup" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="inverter"></a><code>Inverter</code></td>
+<td><code>0=None</code><br><code>1=Leaf_Gen1</code><br><code>2=GS450H</code><br><code>3=UserCAN</code><br><code>4=OpenI</code><br><code>5=Prius_Gen3</code><br><code>6=Outlander</code><br><code>7=GS300H</code><br><code>8=RearOutlander</code></td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>5</td>
+<td>Which drive inverter driver to run. <code>OpenI</code> sends the OpenInverter control frame 0x3F and reads status from 0x190. <code>UserCAN</code> (3) has no driver in <code>UpdateInv()</code>, so the previous selection stays active. Changing it calls the old driver's <code>DeInit()</code> and re-registers CAN filters.</td>
+</tr>
+<tr>
+<td><a id="vehicle"></a><code>Vehicle</code></td>
+<td><code>0=BMW_E46</code><br><code>1=BMW_E6x+</code><br><code>2=Classic</code><br><code>3=None</code><br><code>5=BMW_E39</code><br><code>6=VAG</code><br><code>7=Subaru</code><br><code>8=BMW_E31</code></td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>6</td>
+<td>Which vehicle integration class to run (dash, ignition, gear selector, CAN spoofing). Note the default <code>0</code> is <strong>BMW_E46</strong>, not None. The option list shows <code>3=None</code>, but the code's <code>None</code> enum is 4, so 3 matches no case and simply keeps the class that was active (the boot default is the internal no-vehicle class).</td>
+</tr>
+<tr>
+<td><a id="gearlvr"></a><code>GearLvr</code></td>
+<td><code>0=None</code><br><code>1=BMW_F30</code><br><code>2=JLR_G1</code><br><code>3=JLR_G2</code><br><code>4=BMW_E65</code></td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>108</td>
+<td>Optional CAN gear lever (shifter) class. When a shifter reports a gear, it overrides the forward/reverse inputs, unless the vehicle class already supplies the gear.</td>
+</tr>
+<tr>
+<td><a id="transmission"></a><code>Transmission</code></td>
+<td><code>0=Manual</code><br><code>1=Auto</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>78</td>
+<td>Manual or automatic gearbox. Only read by the BMW E39/E46 and E31 classes to drive the dash correctly.</td>
+</tr>
+<tr>
+<td><a id="interface"></a><code>interface</code></td>
+<td><code>0=Unused</code><br><code>1=i3LIM</code><br><code>2=Chademo</code><br><code>3=CPC</code><br><code>4=Foccci</code></td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>39</td>
+<td>Charge interface for DC fast charging and/or AC pilot handling: BMW i3 LIM, CHAdeMO, CPC, or FOCCCI (CCS). <code>Unused</code> means AC charging is always allowed by the interface.</td>
+</tr>
+<tr>
+<td><a id="chargemodes"></a><code>chargemodes</code></td>
+<td><code>0=Off</code><br><code>1=EXT_DIGI</code><br><code>2=Volt_Ampera</code><br><code>3=Leaf_PDM</code><br><code>4=TeslaOI</code><br><code>5=Out_lander</code><br><code>6=Elcon</code></td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>37</td>
+<td>Which on-board AC charger driver to use. <code>EXT_DIGI</code> uses a digital output to enable an external charger. <code>Off</code> disables AC charging.</td>
+</tr>
+<tr>
+<td><a id="bms_mode"></a><code>BMS_Mode</code></td>
+<td><code>0=Off</code><br><code>1=SimpBMS</code><br><code>2=TiDaisychainSingle</code><br><code>3=TiDaisychainDual</code><br><code>4=LeafBms</code><br><code>5=RenaultKangoo33</code></td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>90</td>
+<td>Which BMS driver to read cell voltage, temperature and charge-current limits from. In this firmware the BMS only gates <strong>charging</strong>; it does not limit drive torque.</td>
+</tr>
+<tr>
+<td><a id="shunttype"></a><code>ShuntType</code></td>
+<td><code>0=None</code><br><code>1=ISA</code><br><code>2=SBOX</code><br><code>3=VAG</code><br><code>4=ISA_udcsw</code></td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>88</td>
+<td>Current/voltage sensor. <code>ISA</code> = IVT-S shunt, <code>SBOX</code> = BMW i3 contactor box, <code>VAG</code> = VW e-box, <code>ISA_udcsw</code> = ISA shunt that also sets <code>udcsw</code> to 20 V below battery voltage. With <code>None</code>, nothing sets <code>udc</code> except the Leaf inverter, the Outlander charger or a CAN map; precharge needs <code>udc</code> to reach <code>udcsw</code>.</td>
+</tr>
+<tr>
+<td><a id="invertercan"></a><code>InverterCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>70</td>
+<td>CAN bus used by the inverter driver (CAN1 or CAN2). Both buses run at 500 kbit/s.</td>
+</tr>
+<tr>
+<td><a id="vehiclecan"></a><code>VehicleCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>71</td>
+<td>CAN bus used by the vehicle class and the shifter class.</td>
+</tr>
+<tr>
+<td><a id="shuntcan"></a><code>ShuntCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>72</td>
+<td>CAN bus the shunt / contactor box is on.</td>
+</tr>
+<tr>
+<td><a id="limcan"></a><code>LimCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>73</td>
+<td>CAN bus used by the charge interface (LIM, CHAdeMO, CPC, FOCCCI).</td>
+</tr>
+<tr>
+<td><a id="chargercan"></a><code>ChargerCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>74</td>
+<td>CAN bus used by the AC charger driver.</td>
+</tr>
+<tr>
+<td><a id="bmscan"></a><code>BMSCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>89</td>
+<td>CAN bus used by the BMS driver.</td>
+</tr>
+<tr>
+<td><a id="obd2can"></a><code>OBD2Can</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>96</td>
+<td>CAN bus on which the VCU answers OBD2 requests (0x7DF).</td>
+</tr>
+<tr>
+<td><a id="canmapcan"></a><code>CanMapCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>97</td>
+<td>CAN bus used for user CAN mapping (<code>can tx</code>/<code>can rx</code>). Read only at boot, so save and reset after changing it.</td>
+</tr>
+<tr>
+<td><a id="dcdccan"></a><code>DCDCCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>107</td>
+<td>CAN bus used by the DC-DC converter driver.</td>
+</tr>
+<tr>
+<td><a id="heatercan"></a><code>HeaterCan</code></td>
+<td><code>0=CAN1</code><br><code>1=CAN2</code></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>138</td>
+<td>CAN bus used by CAN-controlled cabin heaters.</td>
+</tr>
+<tr>
+<td><a id="motactive"></a><code>MotActive</code></td>
+<td><code>0=Mg1and2</code><br><code>1=Mg1</code><br><code>2=Mg2</code><br><code>3=BlendingMG2and1</code></td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>129</td>
+<td>Toyota hybrid gearboxes only: which motor generators drive (MG1, MG2, both, or blended).</td>
+</tr>
+<tr>
+<td><a id="configcanoi"></a><code>ConfigCANOI</code></td>
+<td><code>0=Off</code><br><code>1=On</code><br><code>2=na</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>149</td>
+<td>When set to On with the inverter <code>OpenI</code> and the OI board powered, the VCU rewrites the OpenInverter board's CAN map over SDO (node 1): it <strong>clears the board's existing TX and RX maps</strong>, adds frame 0x190 (opmode, udc, speed, heatsink and motor temperature), saves to the board's flash, then sets this parameter back to Off.</td>
+</tr>
+<tr>
+<td><a id="users232"></a><code>UseRS232</code></td>
+<td><code>0=Off</code><br><code>1=On</code><br><code>2=na</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>155</td>
+<td>On = keep the terminal UART at a fixed baud rate (for a plain RS232 terminal). Off allows the web interface to switch to a faster baud rate.</td>
+</tr>
+<tr>
+<td><a id="driveinhibit"></a><code>DriveInhibit</code></td>
+<td><code>0=Off</code><br><code>1=Plug detect</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>156</td>
+<td><code>Plug detect</code> forces Neutral while the charge-port proximity input says a plug is in.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="throttle">Throttle<a class="headerlink" href="#throttle" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="potmin"></a><code>potmin</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>0</td>
+<td>7</td>
+<td>ADC reading of throttle channel 1 at rest. Read <code>pot</code> with the pedal released and enter it here.</td>
+</tr>
+<tr>
+<td><a id="potmax"></a><code>potmax</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>4095</td>
+<td>8</td>
+<td>ADC reading of throttle channel 1 fully pressed. May be lower than <code>potmin</code> for inverted pedals.</td>
+</tr>
+<tr>
+<td><a id="pot2min"></a><code>pot2min</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>4095</td>
+<td>9</td>
+<td>ADC reading of throttle channel 2 at rest (dual-channel pedals).</td>
+</tr>
+<tr>
+<td><a id="pot2max"></a><code>pot2max</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>4095</td>
+<td>10</td>
+<td>ADC reading of throttle channel 2 fully pressed.</td>
+</tr>
+<tr>
+<td><a id="regenrpm"></a><code>regenrpm</code></td>
+<td>rpm</td>
+<td>100</td>
+<td>10000</td>
+<td>1500</td>
+<td>60</td>
+<td>Motor speed above which full regen is available. Between <code>regenendrpm</code> and this value regen tapers linearly.</td>
+</tr>
+<tr>
+<td><a id="regenendrpm"></a><code>regenendrpm</code></td>
+<td>rpm</td>
+<td>100</td>
+<td>10000</td>
+<td>100</td>
+<td>126</td>
+<td>Motor speed below which regen is zero. Must be lower than <code>regenrpm</code>; if not, both reset to 1500/100.</td>
+</tr>
+<tr>
+<td><a id="regenmax"></a><code>regenmax</code></td>
+<td>%</td>
+<td>-35</td>
+<td>0</td>
+<td>-10</td>
+<td>61</td>
+<td>Regen torque (percent, negative) at zero pedal (lift-off regen).</td>
+</tr>
+<tr>
+<td><a id="regenbrake"></a><code>regenBrake</code></td>
+<td>%</td>
+<td>-35</td>
+<td>0</td>
+<td>-10</td>
+<td>122</td>
+<td>Regen torque (percent, negative) when the brake input is on.</td>
+</tr>
+<tr>
+<td><a id="regenramp"></a><code>regenramp</code></td>
+<td>%/10ms</td>
+<td>0.1</td>
+<td>100</td>
+<td>1</td>
+<td>68</td>
+<td>How fast regen torque may build, percent per 10 ms.</td>
+</tr>
+<tr>
+<td><a id="potmode"></a><code>potmode</code></td>
+<td><code>0=SingleChannel</code><br><code>1=DualChannel</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>11</td>
+<td>Single or dual channel throttle. Dual mode cross-checks both channels and falls back to the lower one, capped at 50 %, if they differ by more than 10 %.</td>
+</tr>
+<tr>
+<td><a id="dirmode"></a><code>dirmode</code></td>
+<td><code>0=Button</code><br><code>1=Switch</code><br><code>2=ButtonReversed</code><br><code>3=SwitchReversed</code><br><code>4=DefaultForward</code></td>
+<td>0</td>
+<td>4</td>
+<td>1</td>
+<td>12</td>
+<td>How forward/reverse inputs are read: momentary buttons, latching switch, the same reversed, or <code>DefaultForward</code> (drive unless reverse input is on).</td>
+</tr>
+<tr>
+<td><a id="dirchange"></a><code>DirChange</code></td>
+<td><code>0=None</code><br><code>1=SpeedThres</code><br><code>2=SpeedBrake</code></td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>147</td>
+<td>Restrict forward/reverse changes: <code>None</code>, only below <code>DirChangeRpm</code>, or below <code>DirChangeRpm</code> with the brake pressed. Also drives the <code>ShiftLockNO</code> output.</td>
+</tr>
+<tr>
+<td><a id="dirchangerpm"></a><code>DirChangeRpm</code></td>
+<td>rpm</td>
+<td>0</td>
+<td>20000</td>
+<td>500</td>
+<td>139</td>
+<td>Motor speed below which a forward/reverse change is accepted when <code>DirChange</code> is not None.</td>
+</tr>
+<tr>
+<td><a id="reversemotor"></a><code>reversemotor</code></td>
+<td><code>0=Off</code><br><code>1=On</code><br><code>2=na</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>127</td>
+<td>Reverse motor rotation. Only honoured for <code>RearOutlander</code>; the firmware forces it back to 0 for other inverters. For an OpenInverter board, reverse rotation is set on the inverter itself.</td>
+</tr>
+<tr>
+<td><a id="throtramp"></a><code>throtramp</code></td>
+<td>%/10ms</td>
+<td>0.1</td>
+<td>100</td>
+<td>10</td>
+<td>13</td>
+<td>Throttle ramp-up rate, percent per 10 ms, used below <code>throtramprpm</code>.</td>
+</tr>
+<tr>
+<td><a id="throtramprpm"></a><code>throtramprpm</code></td>
+<td>rpm</td>
+<td>0</td>
+<td>20000</td>
+<td>20000</td>
+<td>14</td>
+<td>Above this motor speed the throttle ramp is not limited.</td>
+</tr>
+<tr>
+<td><a id="revlim"></a><code>revlim</code></td>
+<td>rpm</td>
+<td>0</td>
+<td>20000</td>
+<td>6000</td>
+<td>15</td>
+<td>Motor speed limit; positive torque is reduced as speed approaches it.</td>
+</tr>
+<tr>
+<td><a id="revregen"></a><code>revRegen</code></td>
+<td><code>0=Off</code><br><code>1=On</code><br><code>2=na</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>137</td>
+<td>Allow regen while in reverse.</td>
+</tr>
+<tr>
+<td><a id="udcmin"></a><code>udcmin</code></td>
+<td>V</td>
+<td>0</td>
+<td>1000</td>
+<td>450</td>
+<td>19</td>
+<td>Battery voltage below which drive torque is derated (gain 3.5 %/V). 0 disables the check.</td>
+</tr>
+<tr>
+<td><a id="udclim"></a><code>udclim</code></td>
+<td>V</td>
+<td>0</td>
+<td>1000</td>
+<td>520</td>
+<td>20</td>
+<td>Over-voltage limit. Above it regen is derated; if exceeded the VCU drops to Off, posts OVERVOLTAGE and, if the motor is stopped, opens the contactors.</td>
+</tr>
+<tr>
+<td><a id="idcmax"></a><code>idcmax</code></td>
+<td>A</td>
+<td>0</td>
+<td>5000</td>
+<td>5000</td>
+<td>21</td>
+<td>Battery discharge current limit for drive torque (needs a shunt). 0 disables.</td>
+</tr>
+<tr>
+<td><a id="idcmin"></a><code>idcmin</code></td>
+<td>A</td>
+<td>-5000</td>
+<td>0</td>
+<td>-5000</td>
+<td>22</td>
+<td>Battery charge (regen) current limit, negative.</td>
+</tr>
+<tr>
+<td><a id="tmphsmax"></a><code>tmphsmax</code></td>
+<td>°C</td>
+<td>50</td>
+<td>150</td>
+<td>85</td>
+<td>23</td>
+<td>Inverter temperature limit. Torque is cut to 50 % within 2 °C above it and to 0 beyond that.</td>
+</tr>
+<tr>
+<td><a id="tmpmmax"></a><code>tmpmmax</code></td>
+<td>°C</td>
+<td>70</td>
+<td>300</td>
+<td>300</td>
+<td>24</td>
+<td>Motor temperature limit, same derate behaviour as <code>tmphsmax</code>.</td>
+</tr>
+<tr>
+<td><a id="throtmax"></a><code>throtmax</code></td>
+<td>%</td>
+<td>0</td>
+<td>100</td>
+<td>100</td>
+<td>25</td>
+<td>Maximum forward torque request, percent.</td>
+</tr>
+<tr>
+<td><a id="throtmin"></a><code>throtmin</code></td>
+<td>%</td>
+<td>-100</td>
+<td>0</td>
+<td>-100</td>
+<td>26</td>
+<td>Maximum regen request, percent (negative).</td>
+</tr>
+<tr>
+<td><a id="throtmaxrev"></a><code>throtmaxRev</code></td>
+<td>%</td>
+<td>0</td>
+<td>100</td>
+<td>30</td>
+<td>123</td>
+<td>Maximum torque request in reverse, percent.</td>
+</tr>
+<tr>
+<td><a id="throtdead"></a><code>throtdead</code></td>
+<td>%</td>
+<td>0</td>
+<td>50</td>
+<td>10</td>
+<td>76</td>
+<td>Pedal dead zone at the bottom of travel, percent. The rest of travel is rescaled to 0–100 %.</td>
+</tr>
+<tr>
+<td><a id="regenbrakelight"></a><code>RegenBrakeLight</code></td>
+<td>%</td>
+<td>-100</td>
+<td>0</td>
+<td>-15</td>
+<td>128</td>
+<td>Turn on the BrakeLight output when <code>potnom</code> is below this (negative) value, i.e. under strong regen.</td>
+</tr>
+<tr>
+<td><a id="throtrpmfilt"></a><code>throtrpmfilt</code></td>
+<td>rpm/10ms</td>
+<td>0.1</td>
+<td>200</td>
+<td>15</td>
+<td>131</td>
+<td>Speed filter constant for the throttle (rpm per 10 ms).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gearbox-control">Gearbox Control<a class="headerlink" href="#gearbox-control" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="gear"></a><code>Gear</code></td>
+<td><code>0=LOW</code><br><code>1=HIGH</code><br><code>2=AUTO</code><br><code>3=HIGHFWDLOWREV</code></td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>27</td>
+<td>Toyota hybrid gearbox ratio selection: low, high, auto, or high forward / low reverse.</td>
+</tr>
+<tr>
+<td><a id="oilpump"></a><code>OilPump</code></td>
+<td>%</td>
+<td>0</td>
+<td>100</td>
+<td>50</td>
+<td>28</td>
+<td>Toyota hybrid gearbox oil pump duty, percent.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cruise-control">Cruise Control<a class="headerlink" href="#cruise-control" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="cruisestep"></a><code>cruisestep</code></td>
+<td>rpm</td>
+<td>1</td>
+<td>1000</td>
+<td>200</td>
+<td>29</td>
+<td>Cruise speed step per button press, rpm.</td>
+</tr>
+<tr>
+<td><a id="cruiseramp"></a><code>cruiseramp</code></td>
+<td>rpm/100ms</td>
+<td>1</td>
+<td>1000</td>
+<td>20</td>
+<td>30</td>
+<td>Cruise speed ramp rate, rpm per 100 ms.</td>
+</tr>
+<tr>
+<td><a id="regenlevel"></a><code>regenlevel</code></td>
+<td></td>
+<td>0</td>
+<td>3</td>
+<td>2</td>
+<td>31</td>
+<td>Regen level 0–3. When cruise is off, the cruise Set/Resume buttons step this down/up.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contactor-control">Contactor Control<a class="headerlink" href="#contactor-control" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="udcsw"></a><code>udcsw</code></td>
+<td>V</td>
+<td>0</td>
+<td>1000</td>
+<td>330</td>
+<td>32</td>
+<td>Voltage that <code>udc</code> must reach before precharge is considered complete and the main contactor closes. SimpBMS (without a shunt), SBOX, VAG box and ISA_udcsw overwrite this with battery voltage minus 20–30 V.</td>
+</tr>
+<tr>
+<td><a id="cruiselight"></a><code>cruiselight</code></td>
+<td><code>0=Off</code><br><code>1=On</code><br><code>2=na</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>33</td>
+<td>Not used by the V2.41A code.</td>
+</tr>
+<tr>
+<td><a id="errlights"></a><code>errlights</code></td>
+<td><code>0=Off</code><br><code>4=EPC</code><br><code>8=engine</code></td>
+<td>0</td>
+<td>255</td>
+<td>0</td>
+<td>34</td>
+<td>Dash warning lights to show (BMW E65 class only).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="communication">Communication<a class="headerlink" href="#communication" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="can3speed"></a><code>CAN3Speed</code></td>
+<td><code>0=k33.3</code><br><code>1=k500</code><br><code>2=k100</code></td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>77</td>
+<td>Bit rate of the third CAN port (MCP25625 over SPI): 33.3k, 500k or 100k. In V2.41A CAN3 only passes IDs 0x108/0x109 to the charge interface.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="charger-control">Charger Control<a class="headerlink" href="#charger-control" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="battcap"></a><code>BattCap</code></td>
+<td>kWh</td>
+<td>0.1</td>
+<td>250</td>
+<td>22</td>
+<td>38</td>
+<td>Usable pack energy, kWh, used for SOC from the shunt's kWh counter.</td>
+</tr>
+<tr>
+<td><a id="voltspnt"></a><code>Voltspnt</code></td>
+<td>V</td>
+<td>0</td>
+<td>1000</td>
+<td>395</td>
+<td>40</td>
+<td>AC charge target voltage. Charging ends when <code>udc</code> ≥ this and <code>idc</code> ≤ <code>IdcTerm</code>.</td>
+</tr>
+<tr>
+<td><a id="pwrspnt"></a><code>Pwrspnt</code></td>
+<td>W</td>
+<td>0</td>
+<td>12000</td>
+<td>1500</td>
+<td>41</td>
+<td>AC charge power setpoint, W, passed to the charger driver.</td>
+</tr>
+<tr>
+<td><a id="idcterm"></a><code>IdcTerm</code></td>
+<td>A</td>
+<td>0</td>
+<td>150</td>
+<td>0</td>
+<td>56</td>
+<td>Charge termination current, A (see <code>Voltspnt</code>).</td>
+</tr>
+<tr>
+<td><a id="ccs_icmd"></a><code>CCS_ICmd</code></td>
+<td>A</td>
+<td>0</td>
+<td>150</td>
+<td>0</td>
+<td>42</td>
+<td>Manual DC charge current command (i3 LIM; currently commented out in favour of an automatic ramp).</td>
+</tr>
+<tr>
+<td><a id="ccs_ilim"></a><code>CCS_ILim</code></td>
+<td>A</td>
+<td>0</td>
+<td>350</td>
+<td>100</td>
+<td>43</td>
+<td>DC fast charge current limit, A (LIM, CHAdeMO, FOCCCI).</td>
+</tr>
+<tr>
+<td><a id="ccs_soclim"></a><code>CCS_SOCLim</code></td>
+<td>%</td>
+<td>0</td>
+<td>100</td>
+<td>80</td>
+<td>44</td>
+<td>DC fast charge SOC limit, percent. Not referenced by the V2.41A code.</td>
+</tr>
+<tr>
+<td><a id="socfc"></a><code>SOCFC</code></td>
+<td>%</td>
+<td>0</td>
+<td>100</td>
+<td>50</td>
+<td>79</td>
+<td>SOC value reported to the DC fast charger (LIM, CHAdeMO). This is a fixed number you set, not the computed SOC.</td>
+</tr>
+<tr>
+<td><a id="chgctrl"></a><code>Chgctrl</code></td>
+<td><code>0=Enable</code><br><code>1=Disable</code><br><code>2=Timer</code></td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>45</td>
+<td>AC charge control: <code>Enable</code> (charge whenever plugged in), <code>Disable</code>, or <code>Timer</code> (start at <code>Chg_Hrs:Chg_Min</code> for <code>Chg_Dur</code> minutes).</td>
+</tr>
+<tr>
+<td><a id="chgacvolt"></a><code>ChgAcVolt</code></td>
+<td>Vac</td>
+<td>0</td>
+<td>250</td>
+<td>240</td>
+<td>120</td>
+<td>Assumed AC mains voltage, used by LIM/CPC/FOCCCI to turn the power setpoint into a current.</td>
+</tr>
+<tr>
+<td><a id="chgeff"></a><code>ChgEff</code></td>
+<td>%</td>
+<td>0</td>
+<td>100</td>
+<td>90</td>
+<td>121</td>
+<td>Assumed charger efficiency, percent, for the same calculation.</td>
+</tr>
+<tr>
+<td><a id="configfoccci"></a><code>ConfigFoccci</code></td>
+<td><code>0=Off</code><br><code>1=On</code><br><code>2=na</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>133</td>
+<td>When On, the VCU configures a FOCCCI board over CAN SDO.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dc-dc-converter">DC-DC Converter<a class="headerlink" href="#dc-dc-converter" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="dcdc_type"></a><code>DCdc_Type</code></td>
+<td><code>0=NoDCDC</code><br><code>1=TeslaG2</code><br><code>2=DCDCElcon</code></td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>105</td>
+<td>DC-DC converter driver: none, Tesla Gen2, or Elcon.</td>
+</tr>
+<tr>
+<td><a id="dcsetpnt"></a><code>DCSetPnt</code></td>
+<td>V</td>
+<td>9</td>
+<td>15</td>
+<td>14</td>
+<td>106</td>
+<td>DC-DC output voltage setpoint (Tesla Gen2).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="battery-management">Battery Management<a class="headerlink" href="#battery-management" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="bms_timeout"></a><code>BMS_Timeout</code></td>
+<td>sec</td>
+<td>1</td>
+<td>120</td>
+<td>10</td>
+<td>91</td>
+<td>Seconds without BMS data before the BMS is treated as invalid (charging stops).</td>
+</tr>
+<tr>
+<td><a id="bms_vminlimit"></a><code>BMS_VminLimit</code></td>
+<td>V</td>
+<td>0</td>
+<td>10</td>
+<td>3.0</td>
+<td>92</td>
+<td>Lowest cell voltage at which charging is still allowed.</td>
+</tr>
+<tr>
+<td><a id="bms_vmaxlimit"></a><code>BMS_VmaxLimit</code></td>
+<td>V</td>
+<td>0</td>
+<td>10</td>
+<td>4.2</td>
+<td>93</td>
+<td>Highest cell voltage at which charging is still allowed.</td>
+</tr>
+<tr>
+<td><a id="bms_tminlimit"></a><code>BMS_TminLimit</code></td>
+<td>°C</td>
+<td>-100</td>
+<td>100</td>
+<td>5</td>
+<td>94</td>
+<td>Lowest cell temperature for charging.</td>
+</tr>
+<tr>
+<td><a id="bms_tmaxlimit"></a><code>BMS_TmaxLimit</code></td>
+<td>°C</td>
+<td>-100</td>
+<td>100</td>
+<td>50</td>
+<td>95</td>
+<td>Highest cell temperature for charging.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="heater-module">Heater Module<a class="headerlink" href="#heater-module" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="heater"></a><code>Heater</code></td>
+<td><code>0=None</code><br><code>1=Ampera</code><br><code>2=VWCoolant</code><br><code>3=VWAir</code><br><code>4=OutlanderCan</code><br><code>5=MGCoolant</code><br><code>6=PWM</code></td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>57</td>
+<td>Cabin heater driver. <code>PWM</code> is listed but has no case in <code>UpdateHeater()</code> in V2.41A.</td>
+</tr>
+<tr>
+<td><a id="control"></a><code>Control</code></td>
+<td><code>0=Disable</code><br><code>1=Enable</code><br><code>2=Timer</code></td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>58</td>
+<td>Heater control: disable, enable in Run, or timer (preheat).</td>
+</tr>
+<tr>
+<td><a id="heatpwr"></a><code>HeatPwr</code></td>
+<td>W</td>
+<td>0</td>
+<td>6500</td>
+<td>0</td>
+<td>59</td>
+<td>Heater power request, W.</td>
+</tr>
+<tr>
+<td><a id="heatpercnt"></a><code>HeatPercnt</code></td>
+<td>%</td>
+<td>0</td>
+<td>100</td>
+<td>0</td>
+<td>124</td>
+<td>Heater power in percent (set from the heater potentiometer in scale modes).</td>
+</tr>
+<tr>
+<td><a id="heatpotdir"></a><code>HeatPotDir</code></td>
+<td><code>0=BelowOF</code><br><code>1=BelowScale</code><br><code>2=AboveOF</code><br><code>3=AboveScale</code></td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>150</td>
+<td>How the analogue heater pot is read: on below/above <code>HeatPotOn</code>, as on/off (<code>OF</code>) or scaled to <code>HeatPotFull</code>.</td>
+</tr>
+<tr>
+<td><a id="heatpoton"></a><code>HeatPotOn</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>0</td>
+<td>151</td>
+<td>Heater pot ADC threshold for heat on.</td>
+</tr>
+<tr>
+<td><a id="heatpotfull"></a><code>HeatPotFull</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>0</td>
+<td>152</td>
+<td>Heater pot ADC value for full heat (scale modes).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rtc-module">RTC Module<a class="headerlink" href="#rtc-module" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="set_day"></a><code>Set_Day</code></td>
+<td><code>0=Sun</code><br><code>1=Mon</code><br><code>2=Tue</code><br><code>3=Wed</code><br><code>4=Thu</code><br><code>5=Fri</code><br><code>6=Sat</code></td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>46</td>
+<td>Set the RTC day of week. Clock values are copied to the RTC only while <code>Chgctrl</code> = Disable.</td>
+</tr>
+<tr>
+<td><a id="set_hour"></a><code>Set_Hour</code></td>
+<td>Hours</td>
+<td>0</td>
+<td>23</td>
+<td>0</td>
+<td>47</td>
+<td>Set the RTC hour (see <code>Set_Day</code>).</td>
+</tr>
+<tr>
+<td><a id="set_min"></a><code>Set_Min</code></td>
+<td>Mins</td>
+<td>0</td>
+<td>59</td>
+<td>0</td>
+<td>48</td>
+<td>Set the RTC minute.</td>
+</tr>
+<tr>
+<td><a id="set_sec"></a><code>Set_Sec</code></td>
+<td>Secs</td>
+<td>0</td>
+<td>59</td>
+<td>0</td>
+<td>49</td>
+<td>Set the RTC second.</td>
+</tr>
+<tr>
+<td><a id="chg_hrs"></a><code>Chg_Hrs</code></td>
+<td>Hours</td>
+<td>0</td>
+<td>23</td>
+<td>0</td>
+<td>50</td>
+<td>Timed charge start hour.</td>
+</tr>
+<tr>
+<td><a id="chg_min"></a><code>Chg_Min</code></td>
+<td>Mins</td>
+<td>0</td>
+<td>59</td>
+<td>0</td>
+<td>51</td>
+<td>Timed charge start minute.</td>
+</tr>
+<tr>
+<td><a id="chg_dur"></a><code>Chg_Dur</code></td>
+<td>Mins</td>
+<td>0</td>
+<td>600</td>
+<td>0</td>
+<td>52</td>
+<td>Timed charge duration, minutes.</td>
+</tr>
+<tr>
+<td><a id="pre_hrs"></a><code>Pre_Hrs</code></td>
+<td>Hours</td>
+<td>0</td>
+<td>59</td>
+<td>0</td>
+<td>53</td>
+<td>Preheat start hour.</td>
+</tr>
+<tr>
+<td><a id="pre_min"></a><code>Pre_Min</code></td>
+<td>Mins</td>
+<td>0</td>
+<td>59</td>
+<td>0</td>
+<td>54</td>
+<td>Preheat start minute.</td>
+</tr>
+<tr>
+<td><a id="pre_dur"></a><code>Pre_Dur</code></td>
+<td>Mins</td>
+<td>0</td>
+<td>60</td>
+<td>0</td>
+<td>55</td>
+<td>Preheat duration, minutes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="general-purpose-io">General Purpose I/O<a class="headerlink" href="#general-purpose-io" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="pumppwm"></a><code>PumpPWM</code></td>
+<td><code>0=GS450hOil</code><br><code>1=TachoOut</code><br><code>2=SpeedoOut</code></td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>135</td>
+<td>Function of the Oil Pump PWM pin (Timer 1): Toyota oil pump, tachometer pulse output, or speedometer pulse output.</td>
+</tr>
+<tr>
+<td><a id="out1func"></a><code>Out1Func</code></td>
+<td><code>0=NoneOut</code><br><code>1=ChaDeMoAlw</code><br><code>2=OBCEnable</code><br><code>3=HeaterEnable</code><br><code>4=RunIndication</code><br><code>5=WarnIndication</code><br><code>6=CoolantPump</code><br><code>7=NegContactor</code><br><code>8=BrakeLight</code><br><code>9=ReverseLight</code><br><code>10=BrakeVacPump</code><br><code>11=CoolingFan</code><br><code>12=HvActive</code><br><code>13=ShiftLockNO</code><br><code>14=PreHeatOut</code><br><code>15=PwmTim3</code><br><code>16=CpSpoof</code><br><code>17=GS450pump</code><br><code>18=PwmTempGauge</code><br><code>19=PwmSocGauge</code></td>
+<td>0</td>
+<td>14</td>
+<td>6</td>
+<td>80</td>
+<td>Function of GP Out 1 (low-side switch). See the output function list.</td>
+</tr>
+<tr>
+<td><a id="out2func"></a><code>Out2Func</code></td>
+<td><code>0=NoneOut</code><br><code>1=ChaDeMoAlw</code><br><code>2=OBCEnable</code><br><code>3=HeaterEnable</code><br><code>4=RunIndication</code><br><code>5=WarnIndication</code><br><code>6=CoolantPump</code><br><code>7=NegContactor</code><br><code>8=BrakeLight</code><br><code>9=ReverseLight</code><br><code>10=BrakeVacPump</code><br><code>11=CoolingFan</code><br><code>12=HvActive</code><br><code>13=ShiftLockNO</code><br><code>14=PreHeatOut</code><br><code>15=PwmTim3</code><br><code>16=CpSpoof</code><br><code>17=GS450pump</code><br><code>18=PwmTempGauge</code><br><code>19=PwmSocGauge</code></td>
+<td>0</td>
+<td>14</td>
+<td>7</td>
+<td>81</td>
+<td>Function of GP Out 2.</td>
+</tr>
+<tr>
+<td><a id="out3func"></a><code>Out3Func</code></td>
+<td><code>0=NoneOut</code><br><code>1=ChaDeMoAlw</code><br><code>2=OBCEnable</code><br><code>3=HeaterEnable</code><br><code>4=RunIndication</code><br><code>5=WarnIndication</code><br><code>6=CoolantPump</code><br><code>7=NegContactor</code><br><code>8=BrakeLight</code><br><code>9=ReverseLight</code><br><code>10=BrakeVacPump</code><br><code>11=CoolingFan</code><br><code>12=HvActive</code><br><code>13=ShiftLockNO</code><br><code>14=PreHeatOut</code><br><code>15=PwmTim3</code><br><code>16=CpSpoof</code><br><code>17=GS450pump</code><br><code>18=PwmTempGauge</code><br><code>19=PwmSocGauge</code></td>
+<td>0</td>
+<td>14</td>
+<td>3</td>
+<td>82</td>
+<td>Function of GP Out 3.</td>
+</tr>
+<tr>
+<td><a id="sl1func"></a><code>SL1Func</code></td>
+<td><code>0=NoneOut</code><br><code>1=ChaDeMoAlw</code><br><code>2=OBCEnable</code><br><code>3=HeaterEnable</code><br><code>4=RunIndication</code><br><code>5=WarnIndication</code><br><code>6=CoolantPump</code><br><code>7=NegContactor</code><br><code>8=BrakeLight</code><br><code>9=ReverseLight</code><br><code>10=BrakeVacPump</code><br><code>11=CoolingFan</code><br><code>12=HvActive</code><br><code>13=ShiftLockNO</code><br><code>14=PreHeatOut</code><br><code>15=PwmTim3</code><br><code>16=CpSpoof</code><br><code>17=GS450pump</code><br><code>18=PwmTempGauge</code><br><code>19=PwmSocGauge</code></td>
+<td>0</td>
+<td>14</td>
+<td>0</td>
+<td>83</td>
+<td>Function of the Trans SL1 output when it is not used by a Toyota gearbox.</td>
+</tr>
+<tr>
+<td><a id="sl2func"></a><code>SL2Func</code></td>
+<td><code>0=NoneOut</code><br><code>1=ChaDeMoAlw</code><br><code>2=OBCEnable</code><br><code>3=HeaterEnable</code><br><code>4=RunIndication</code><br><code>5=WarnIndication</code><br><code>6=CoolantPump</code><br><code>7=NegContactor</code><br><code>8=BrakeLight</code><br><code>9=ReverseLight</code><br><code>10=BrakeVacPump</code><br><code>11=CoolingFan</code><br><code>12=HvActive</code><br><code>13=ShiftLockNO</code><br><code>14=PreHeatOut</code><br><code>15=PwmTim3</code><br><code>16=CpSpoof</code><br><code>17=GS450pump</code><br><code>18=PwmTempGauge</code><br><code>19=PwmSocGauge</code></td>
+<td>0</td>
+<td>14</td>
+<td>0</td>
+<td>84</td>
+<td>Function of the Trans SL2 output.</td>
+</tr>
+<tr>
+<td><a id="pwm1func"></a><code>PWM1Func</code></td>
+<td><code>0=NoneOut</code><br><code>1=ChaDeMoAlw</code><br><code>2=OBCEnable</code><br><code>3=HeaterEnable</code><br><code>4=RunIndication</code><br><code>5=WarnIndication</code><br><code>6=CoolantPump</code><br><code>7=NegContactor</code><br><code>8=BrakeLight</code><br><code>9=ReverseLight</code><br><code>10=BrakeVacPump</code><br><code>11=CoolingFan</code><br><code>12=HvActive</code><br><code>13=ShiftLockNO</code><br><code>14=PreHeatOut</code><br><code>15=PwmTim3</code><br><code>16=CpSpoof</code><br><code>17=GS450pump</code><br><code>18=PwmTempGauge</code><br><code>19=PwmSocGauge</code></td>
+<td>0</td>
+<td>19</td>
+<td>0</td>
+<td>85</td>
+<td>Function of PWM 1 (Timer 3 ch 1, push-pull 12 V). PWM-only functions 15–19 are valid here.</td>
+</tr>
+<tr>
+<td><a id="pwm2func"></a><code>PWM2Func</code></td>
+<td><code>0=NoneOut</code><br><code>1=ChaDeMoAlw</code><br><code>2=OBCEnable</code><br><code>3=HeaterEnable</code><br><code>4=RunIndication</code><br><code>5=WarnIndication</code><br><code>6=CoolantPump</code><br><code>7=NegContactor</code><br><code>8=BrakeLight</code><br><code>9=ReverseLight</code><br><code>10=BrakeVacPump</code><br><code>11=CoolingFan</code><br><code>12=HvActive</code><br><code>13=ShiftLockNO</code><br><code>14=PreHeatOut</code><br><code>15=PwmTim3</code><br><code>16=CpSpoof</code><br><code>17=GS450pump</code><br><code>18=PwmTempGauge</code><br><code>19=PwmSocGauge</code></td>
+<td>0</td>
+<td>19</td>
+<td>4</td>
+<td>86</td>
+<td>Function of PWM 2.</td>
+</tr>
+<tr>
+<td><a id="pwm3func"></a><code>PWM3Func</code></td>
+<td><code>0=NoneOut</code><br><code>1=ChaDeMoAlw</code><br><code>2=OBCEnable</code><br><code>3=HeaterEnable</code><br><code>4=RunIndication</code><br><code>5=WarnIndication</code><br><code>6=CoolantPump</code><br><code>7=NegContactor</code><br><code>8=BrakeLight</code><br><code>9=ReverseLight</code><br><code>10=BrakeVacPump</code><br><code>11=CoolingFan</code><br><code>12=HvActive</code><br><code>13=ShiftLockNO</code><br><code>14=PreHeatOut</code><br><code>15=PwmTim3</code><br><code>16=CpSpoof</code><br><code>17=GS450pump</code><br><code>18=PwmTempGauge</code><br><code>19=PwmSocGauge</code></td>
+<td>0</td>
+<td>19</td>
+<td>2</td>
+<td>87</td>
+<td>Function of PWM 3.</td>
+</tr>
+<tr>
+<td><a id="gp12vinfunc"></a><code>GP12VInFunc</code></td>
+<td><code>0=NoneIn</code><br><code>1=HeatReq</code><br><code>2=HVRequest</code><br><code>3=DCFCRequest</code><br><code>4=Switch_NoRegen</code><br><code>5=HVIL</code></td>
+<td>0</td>
+<td>5</td>
+<td>12</td>
+<td>98</td>
+<td>Function of the GP 12 V input (pin 50). Its default, 12, is above the declared max of 5 and indexes past the end of an array; set it explicitly.</td>
+</tr>
+<tr>
+<td><a id="hvreqfunc"></a><code>HVReqFunc</code></td>
+<td><code>0=NoneIn</code><br><code>1=HeatReq</code><br><code>2=HVRequest</code><br><code>3=DCFCRequest</code><br><code>4=Switch_NoRegen</code><br><code>5=HVIL</code></td>
+<td>0</td>
+<td>5</td>
+<td>2</td>
+<td>99</td>
+<td>Function of the HV request input pin (51). With defaults it is overridden by <code>PB3InFunc</code>, which also defaults to <code>HVRequest</code>; set PB1–3 to <code>NoneIn</code> if unused.</td>
+</tr>
+<tr>
+<td><a id="pb1infunc"></a><code>PB1InFunc</code></td>
+<td><code>0=NoneIn</code><br><code>1=HeatReq</code><br><code>2=HVRequest</code><br><code>3=DCFCRequest</code><br><code>4=Switch_NoRegen</code><br><code>5=HVIL</code></td>
+<td>0</td>
+<td>5</td>
+<td>2</td>
+<td>140</td>
+<td>Function of the Trans PB1 input (pin 42, inverted) when not used by a Toyota gearbox. Defaults to <code>HVRequest</code>; set to <code>NoneIn</code> if unused.</td>
+</tr>
+<tr>
+<td><a id="pb2infunc"></a><code>PB2InFunc</code></td>
+<td><code>0=NoneIn</code><br><code>1=HeatReq</code><br><code>2=HVRequest</code><br><code>3=DCFCRequest</code><br><code>4=Switch_NoRegen</code><br><code>5=HVIL</code></td>
+<td>0</td>
+<td>5</td>
+<td>2</td>
+<td>141</td>
+<td>Function of the Trans PB2 input (pin 41). Same default caveat as <code>PB1InFunc</code>.</td>
+</tr>
+<tr>
+<td><a id="pb3infunc"></a><code>PB3InFunc</code></td>
+<td><code>0=NoneIn</code><br><code>1=HeatReq</code><br><code>2=HVRequest</code><br><code>3=DCFCRequest</code><br><code>4=Switch_NoRegen</code><br><code>5=HVIL</code></td>
+<td>0</td>
+<td>5</td>
+<td>2</td>
+<td>142</td>
+<td>Function of the Trans PB3 input (pin 40). Same default caveat; with defaults this pin, not pin 51, is the active HV request input.</td>
+</tr>
+<tr>
+<td><a id="gpa1func"></a><code>GPA1Func</code></td>
+<td><code>0=None</code><br><code>1=ProxPilot</code><br><code>2=BrakeVacSensor</code><br><code>3=HeaterPot</code></td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>110</td>
+<td>Function of analogue input 1: proximity pilot, brake vacuum sensor, or heater pot.</td>
+</tr>
+<tr>
+<td><a id="gpa2func"></a><code>GPA2Func</code></td>
+<td><code>0=None</code><br><code>1=ProxPilot</code><br><code>2=BrakeVacSensor</code><br><code>3=HeaterPot</code></td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>111</td>
+<td>Function of analogue input 2.</td>
+</tr>
+<tr>
+<td><a id="ppthresh"></a><code>ppthresh</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>2500</td>
+<td>114</td>
+<td>Proximity-pilot ADC threshold. At or below = plug detected.</td>
+</tr>
+<tr>
+<td><a id="brkvacthresh"></a><code>BrkVacThresh</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>2500</td>
+<td>115</td>
+<td>Brake vacuum ADC value at which the pump turns off. If it is above <code>BrkVacHyst</code> the sensor is treated as rising with vacuum.</td>
+</tr>
+<tr>
+<td><a id="brkvachyst"></a><code>BrkVacHyst</code></td>
+<td>dig</td>
+<td>0</td>
+<td>4095</td>
+<td>2500</td>
+<td>116</td>
+<td>Brake vacuum ADC value at which the pump turns on.</td>
+</tr>
+<tr>
+<td><a id="digipot1step"></a><code>DigiPot1Step</code></td>
+<td>dig</td>
+<td>0</td>
+<td>255</td>
+<td>0</td>
+<td>117</td>
+<td>Digital potentiometer 1 position (0–255). Used by some vehicle classes as a fuel gauge.</td>
+</tr>
+<tr>
+<td><a id="digipot2step"></a><code>DigiPot2Step</code></td>
+<td>dig</td>
+<td>0</td>
+<td>255</td>
+<td>0</td>
+<td>118</td>
+<td>Digital potentiometer 2 position.</td>
+</tr>
+<tr>
+<td><a id="fantemp"></a><code>FanTemp</code></td>
+<td>°C</td>
+<td>0</td>
+<td>100</td>
+<td>40</td>
+<td>134</td>
+<td>Cooling fan output turns on above this (max of inverter and charger temperature), off 5 °C below.</td>
+</tr>
+<tr>
+<td><a id="tachoppr"></a><code>TachoPPR</code></td>
+<td>PPR</td>
+<td>0</td>
+<td>100</td>
+<td>2</td>
+<td>136</td>
+<td>Pulses per revolution for the tacho/speedo pulse output.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="isa-shunt-control">ISA Shunt Control<a class="headerlink" href="#isa-shunt-control" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="isainit"></a><code>IsaInit</code></td>
+<td><code>0=Off</code><br><code>1=On</code><br><code>2=na</code></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>75</td>
+<td>Set to 1 once and reboot to send the ISA shunt its initialisation sequence (new sensor only).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pwm-control">PWM Control<a class="headerlink" href="#pwm-control" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Unit / options</th>
+<th>Min</th>
+<th>Max</th>
+<th>Default</th>
+<th>ID</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="tim3_presc"></a><code>Tim3_Presc</code></td>
+<td></td>
+<td>1</td>
+<td>72000</td>
+<td>719</td>
+<td>100</td>
+<td>Timer 3 prescaler for the PWM outputs (72 MHz clock).</td>
+</tr>
+<tr>
+<td><a id="tim3_period"></a><code>Tim3_Period</code></td>
+<td></td>
+<td>1</td>
+<td>100000</td>
+<td>7200</td>
+<td>101</td>
+<td>Timer 3 period for the PWM outputs.</td>
+</tr>
+<tr>
+<td><a id="tim3_1_oc"></a><code>Tim3_1_OC</code></td>
+<td></td>
+<td>1</td>
+<td>100000</td>
+<td>3600</td>
+<td>102</td>
+<td>PWM 1 compare value (duty) when its function is <code>PwmTim3</code>.</td>
+</tr>
+<tr>
+<td><a id="tim3_2_oc"></a><code>Tim3_2_OC</code></td>
+<td></td>
+<td>1</td>
+<td>100000</td>
+<td>3600</td>
+<td>103</td>
+<td>PWM 2 compare value.</td>
+</tr>
+<tr>
+<td><a id="tim3_3_oc"></a><code>Tim3_3_OC</code></td>
+<td></td>
+<td>1</td>
+<td>100000</td>
+<td>3600</td>
+<td>104</td>
+<td>PWM 3 compare value.</td>
+</tr>
+<tr>
+<td><a id="cp_pwm"></a><code>CP_PWM</code></td>
+<td></td>
+<td>1</td>
+<td>100</td>
+<td>10</td>
+<td>132</td>
+<td>Control-pilot spoof duty (computed from <code>PilotLim</code> when a LIM/CPC/FOCCCI is used).</td>
+</tr>
+<tr>
+<td><a id="dc_maxtemp"></a><code>DC_MaxTemp</code></td>
+<td></td>
+<td>1</td>
+<td>100</td>
+<td>10</td>
+<td>143</td>
+<td>PWM temperature gauge duty at <code>tmphsmax</code>.</td>
+</tr>
+<tr>
+<td><a id="dc_mintemp"></a><code>DC_MinTemp</code></td>
+<td></td>
+<td>1</td>
+<td>100</td>
+<td>0</td>
+<td>144</td>
+<td>PWM temperature gauge duty at 0 °C.</td>
+</tr>
+<tr>
+<td><a id="dc_maxsoc"></a><code>DC_MaxSOC</code></td>
+<td></td>
+<td>1</td>
+<td>100</td>
+<td>10</td>
+<td>145</td>
+<td>PWM SOC gauge duty at 100 %.</td>
+</tr>
+<tr>
+<td><a id="dc_minsoc"></a><code>DC_MinSOC</code></td>
+<td></td>
+<td>1</td>
+<td>100</td>
+<td>0</td>
+<td>146</td>
+<td>PWM SOC gauge duty at 0 %.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Documentation licensed GPL-3.0, same as the firmware it describes.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
